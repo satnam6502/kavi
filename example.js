@@ -31,7 +31,6 @@ function drawGrid(canvas) {
         }
 
 }
-
 // Draw a tree trunk at position (x, y)
 function trunk(x, y) {
     canvas.fillStyle = "brown";
@@ -39,7 +38,7 @@ function trunk(x, y) {
 }
 
 // Draw a right leaf a position (x, y)
-function leaf(x, y) {
+function rightLeaf(x, y) {
     canvas.fillStyle = "green"; // Draw a green leaf
     canvas.beginPath(); // Start a path to define the slanted shape of the leaf.
     canvas.moveTo(x, y); // Mark the four corners of the leaf.
@@ -48,6 +47,11 @@ function leaf(x, y) {
     canvas.lineTo(x+10, y);
     canvas.fill(); // Fill in the leaf with green.
     canvas.closePath(); // Close the path for the leaf.
+}
+
+// Draw a left leaf a position (x, y)
+function leftLeaf(x, y) {
+  // For Kavi to do.
 }
 
 // Get the canvas element
@@ -61,13 +65,13 @@ drawGrid(canvas);
 trunk(100, 300);
 
 // Right leaf
-leaf(100, 100);
+rightLeaf(200, 100);
 
 // Pointy top of tree
 canvas.fillStyle = "brown";
 canvas.beginPath();
 canvas.moveTo(400, 100);
-canvas.lineTo(450, 9);
+canvas.lineTo(450, 0);
 canvas.lineTo(500, 100);
 canvas.lineTo(400, 100);
 canvas.fill();
